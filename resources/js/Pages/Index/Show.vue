@@ -2,9 +2,7 @@
 import MainLayout from '../../Layouts/MainLayout.vue';
 
 <template>
-    
-        <div>Show</div>
-  
+  <div>Show</div>
 </template>
 
 
