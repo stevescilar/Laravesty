@@ -2,12 +2,17 @@
 import MainLayout from '../../Layouts/MainLayout.vue';
 
 <template>
-    <MainLayout>
+    
         <div>Show</div>
-    </MainLayout>
+  
 </template>
 
-<script setup>
+
+<!-- persistent Layout -->
+<script>
     import MainLayout from '../../Layouts/MainLayout.vue';
+    export default {
+    layout: MainLayout
+    }
 </script>
 
