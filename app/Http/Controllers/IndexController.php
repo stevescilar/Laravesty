@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Listing;
+
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
