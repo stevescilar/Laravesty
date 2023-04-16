@@ -1,7 +1,7 @@
 <template>
   <Link href="/">Home Page</Link> &nbsp; &nbsp;
   <Link href="/show">Show Page</Link> &nbsp; &nbsp;
-  <Link href="/listing">Listing</Link>
+  <Link href="/listing">Listings</Link>
   <!-- <Link href="/create">create</Link> -->
   <div>Timer {{ timer }}</div>
   <slot />
