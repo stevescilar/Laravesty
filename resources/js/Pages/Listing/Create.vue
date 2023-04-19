@@ -52,7 +52,7 @@
   
         <div class="col-span-6">
           <label class="label">Price</label>
-          <input v-model.number="form.price" type="text" class="input" />
+          <input v-model.number="form.price" type="number" class="input" />
           <div v-if="form.errors.price" class="input-error">
           {{ form.errors.price }}</div>
         </div>
