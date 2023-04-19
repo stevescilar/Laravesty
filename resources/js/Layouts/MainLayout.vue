@@ -1,7 +1,7 @@
 <template>
   <!-- <Link href="/listing/create">New Listing</Link> -->
 
-  <header class="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 w-full">
+  <header class="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 w-full">
     <div class="container mx-auto">
       <nav class="p-4 flex items-center justify-between">
         <div class="text-lg font-medium">
@@ -12,7 +12,7 @@
             <Link :href="route('listing.index')">LaraVesty</Link>
           </div>
           <div>
-            <Link :href="route('listing.create')" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium p-2 rounded-md">+ New Listing</Link>
+            <Link :href="route('listing.create')" class="btn-primary">+ New Listing</Link>
           </div>
       </nav>
     </div>
