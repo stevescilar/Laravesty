@@ -1,5 +1,5 @@
 // import { ref } from 'vue';
-import { computed, isRef  } from 'vue';
+import { computed, isRef  } from 'vue'
 
 export const useMonthlyPayment = (total, interestRate, duration) => {
   const monthlyPayment = computed(() => {
