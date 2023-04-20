@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="flex justify-between">
-                            <div>Principle</div>
+                            <div>Principle Amount</div>
                             <div>
                                 <Price :price="listing.price" class="font-medium"/>
                             </div>
