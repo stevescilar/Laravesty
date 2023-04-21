@@ -6,25 +6,23 @@
       <nav class="p-4 flex items-center justify-between">
         <div class="text-lg font-medium">
           <!-- <Link :href="{{ route('listing.index') }}">C</Link> -->
-              <Link :href="route('listing.index')">Listings</Link>
-          </div>
-          <div class="text-xl text-indigo-600 dark:text-indigo-300 font-bold text-center">
-            <Link :href="route('listing.index')">LaraVesty</Link>
-          </div>
-          <div>
-            <Link :href="route('listing.create')" class="btn-primary">+ New Listing</Link>
-          </div>
+          <Link :href="route('listing.index')">Listings</Link>
+        </div>
+        <div class="text-xl text-indigo-600 dark:text-indigo-300 font-bold text-center">
+          <Link :href="route('listing.index')">LaraVesty</Link>
+        </div>
+        <div>
+          <Link :href="route('listing.create')" class="btn-primary">+ New Listing</Link>
+        </div>
       </nav>
     </div>
-
   </header>
-  <main class="container mx-auto p-4">
+  <main class="container mx-auto p-4 w-full">
     <div v-if="flashSuccess" class="mb-4 border rounded-md shadow-sm border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900 p-2">
       {{ flashSuccess }}
     </div>
     <slot />
   </main>
- 
 </template>
 
 <script setup>
