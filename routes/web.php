@@ -15,7 +15,7 @@ Route::resource('listing', ListingController::class);
 // Login routes
 Route::get('login', [AuthController::class, 'create'])->name('login');
 Route::post('login', [AuthController::class, 'store'])->name('login.store');
-Route::delete('logout', [AuthController::class, 'destroy'])->name('logout');
+Route::DELETE('logout', [AuthController::class, 'destroy'])->name('logout');
 
 
 
