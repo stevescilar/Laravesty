@@ -19,6 +19,8 @@
         "vue": "^3.2.47"
     },
     "dependencies": {
+        "@heroicons/react": "^2.0.17",
+        "@heroicons/vue": "^2.0.17",
         "@inertiajs/progress": "^0.2.7",
         "@inertiajs/vue3": "^1.0.2",
         "ziggy-js": "^1.5.0"

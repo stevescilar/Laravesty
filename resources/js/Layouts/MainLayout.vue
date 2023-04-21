@@ -15,7 +15,7 @@
         <div v-if="user" class="flex items-center gap-4">
           <div class="text-sm text-gray-500">Hi! <span class="font-bold text-green-600">{{ user.name }}</span></div>
           <Link :href="route('listing.create')" class="btn-primary">+ New Listing</Link>
-          <div>Logout</div>
+          <div class="btn-secondary">Logout</div>
         </div>
         <div v-else>
           <Link :href="route('login')" class="btn-primary">Sign-In</Link>
@@ -34,6 +34,7 @@
 <script setup>
 import { computed } from 'vue' 
 import { Link, usePage } from '@inertiajs/vue3'
+import { BeakerIcon } from '@heroicons/vue/24/solid'
 
 // const page =usePage()
 const flashSuccess =  computed(
