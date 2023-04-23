@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 
 class ListingController extends Controller
 {
+
+   
     /**
      * Display a listing of the resource.
      */
@@ -26,6 +28,11 @@ class ListingController extends Controller
     /**
      * Show the form for creating a new resource.
      */
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+
     public function create()
     {
         return inertia('Listing/Create');
