@@ -9,8 +9,8 @@ use App\Http\Controllers\UserAccountController;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/show',[IndexController::class, 'show'])->middleware(['web', 'auth']);
-// Route::resource('listing', ListingController::class)->only(['index', 'show', 'create','store']);
-Route::resource('listing', ListingController::class)->only(['create','store', 'edit', 'update', 'destroy'])->middleware(['web', 'auth']);
+
+Route::resource('listing', ListingController::class)->only(['create','store', 'edit', 'update', 'destroy'])->middleware('auth');
 
 Route::resource('listing', ListingController::class)->except(['create','store', 'edit', 'update', 'destroy']);
 // Login routes

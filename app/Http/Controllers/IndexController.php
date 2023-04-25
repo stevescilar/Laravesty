@@ -12,6 +12,9 @@ class IndexController extends Controller
     //function goes here
      public function index()
      {
+
+      dd(Auth::check());
+      
        return inertia('Index/Index',
       
        [
