@@ -1,7 +1,12 @@
 <template>
-  <form @submit.prevent="login">
+  <form @submit.prevent="register">
     <div class="w-1/2 mx-auto">
       <div>
+        <label for="name" class="label">Your Name</label>
+        <input id="name" v-model="form.name" type="text" class="input" />
+        <div v-if="form.errors.name" class="input-error"> {{ form.errors.name }} </div>
+      </div>
+      <div class="mt-4">
         <label for="email" class="label">Email (username)</label>
         <input id="email" v-model="form.email" type="text" class="input" />
         <div v-if="form.errors.email" class="input-error"> {{ form.errors.email }} </div>
@@ -12,20 +17,25 @@
         <div v-if="form.errors.password" class="input-error"> {{ form.errors.password }} </div>
       </div>
       <div class="mt-4">
-        <button class="btn-primary w-full" type="submit">Login</button>
+        <label for="password_confirmation" class="label">Re-enter Password </label>
+        <input id="password_confirmation" v-model="form.password_confirmation" type="password" class="input" />        
+      </div>
+      <div class="mt-4">
+        <button class="btn-primary w-full" type="submit">Create Account</button>
       </div>
     </div>
   </form> 
 </template>
-
+  
 <script setup>
 import { useForm } from '@inertiajs/vue3'
-
+  
 const form = useForm({
+  name: null,
   email: null,
   password: null,
+  password_confirmation: null,
 })
-
-// eslint-disable-next-line no-undef
-const login = () => form.post(route('login.store'))
+  
+const register = () => form.post()
 </script>

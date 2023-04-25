@@ -6,7 +6,7 @@
       <nav class="p-4 flex items-center justify-between">
         <div class="text-lg font-medium">
           <!-- <Link :href="{{ route('listing.index') }}">C</Link> -->
-          <Link :href="route('listing.index')">Microsil</Link>
+          <Link :href="route('listing.index')">Listings</Link>
         </div>
         <div class="text-xl text-indigo-600 dark:text-indigo-300 font-bold text-center">
           <Link :href="route('listing.index')">LaraVesty</Link>
@@ -17,7 +17,8 @@
           <Link :href="route('listing.create')" class="btn-primary">+ New Listing</Link>
           <Link :href="route('logout')" method="delete" as="button">Logout</Link>
         </div> 
-        <div v-else>
+        <div v-else class="flex items-center gap-2">
+          <Link :href="route('user-account.create')" class="btn-primary">Register</Link>
           <Link :href="route('login')" class="btn-primary">Sign-In</Link>
         </div>
       </nav>
