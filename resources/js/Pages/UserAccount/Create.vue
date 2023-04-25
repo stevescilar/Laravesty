@@ -1,3 +1,5 @@
+<!-- eslint-disable no-undef -->
+<!-- eslint-disable no-undef -->
 <template>
   <form @submit.prevent="register">
     <div class="w-1/2 mx-auto">
@@ -37,5 +39,6 @@ const form = useForm({
   password_confirmation: null,
 })
   
-const register = () => form.post()
+// eslint-disable-next-line no-undef
+const register = () => form.post(route('user-account.store'))
 </script>
