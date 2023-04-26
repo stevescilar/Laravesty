@@ -9,7 +9,7 @@
           <Link :href="route('listing.index')">Listings</Link>
         </div>
         <div class="text-xl text-indigo-600 dark:text-indigo-300 font-bold text-center">
-          <Link :href="route('listing.index')">LaraVesty</Link>
+          <Link href="/">LaraVesty</Link>
         </div>
       
         <div v-if="user" class="flex items-center gap-4">
