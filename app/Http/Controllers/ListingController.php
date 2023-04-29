@@ -24,7 +24,9 @@ class ListingController extends Controller
             'Listing/Index',
       
             [
-                'listings' => Listing::all()
+                // display with pagination
+                'listings' => Listing::orderByDesc('created_at')
+                ->paginate(9)
             ]
             );
     }
