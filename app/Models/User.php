@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Support\Facades\Hash;
 
@@ -49,6 +50,14 @@ class User extends Authenticatable
         return Attribute::make(
             get: fn ($value) => $value,
             set: fn ($value) => Hash::make($value),
+        );
+    }
+
+    public function listings() : HasMany
+    {
+        return $this->hasMany(
+            \App\Models\Listing::class,
+            'by_user_id'
         );
     }
 }
