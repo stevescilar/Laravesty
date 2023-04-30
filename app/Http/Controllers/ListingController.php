@@ -49,8 +49,7 @@ class ListingController extends Controller
             $query->where('area','<=', $filters['areaTo']);
         }
         
-
-        // building the querry
+\
 
         return inertia(
             'Listing/Index',
@@ -63,13 +62,7 @@ class ListingController extends Controller
             );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+
 
     public function create()
     {
