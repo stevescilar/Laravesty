@@ -21,7 +21,7 @@
         >
           <Link class="btn-outline text-xs font-medium"> Preview </Link>
           <Link class="btn-outline text-xs font-medium"> Edit </Link>
-          <Link class="btn-outline text-xs font-medium" :href="route('realtor.listing.destroy', {listing: listing.id})" as="button" method="delete"> Delete </Link>
+          <Link class="btn-outline text-xs font-medium" :href="route('realtor.listing.destroy', { listing: listing.id })" as="button" method="delete"> Delete </Link>
         </div>
       </div>
     </Box>
@@ -29,16 +29,17 @@
 </template>
 
 <script setup>
-import  RealtorFilters from '@/Pages/Realtor/Index/Components/RealtorFilters.vue'
+
 import ListingAddress from '@/Components/ListingAddress.vue'
 import ListingSpace from '@/Components/ListingSpace.vue'
 import Price from '@/Components/Price.vue'
 import Box from '@/Components/UI/Box.vue'
 import { Link } from '@inertiajs/vue3'
+import  RealtorFilters from '@/Pages/Realtor/Index/Components/RealtorFilters.vue'
 
 
 defineProps(
   {
-    listings: Array, 
+    listings: Object, 
   })
 </script>
