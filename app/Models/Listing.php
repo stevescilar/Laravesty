@@ -21,4 +21,10 @@ class Listing extends Model
             'by_user_id'
         );
     }
+    
+    // local scope queries
+    public function scopeMostRecent($query)
+    {
+        return $query->orderByDesc('created_at');
+    }
 }
