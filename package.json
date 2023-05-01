@@ -1,28 +1,41 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "fix:eslint": "eslint --ext .js,.vue resources/js/ --fix"
-    },
-    "devDependencies": {
-        "@tailwindcss/forms": "^0.5.3",
-        "@vitejs/plugin-vue": "^4.1.0",
-        "autoprefixer": "^10.4.14",
-        "axios": "^1.1.2",
-        "eslint": "^8.38.0",
-        "eslint-plugin-vue": "^9.10.0",
-        "laravel-vite-plugin": "^0.7.2",
-        "postcss": "^8.4.22",
-        "tailwindcss": "^3.3.1",
-        "vite": "^4.0.0",
-        "vue": "^3.2.47"
-    },
-    "dependencies": {
-        "@heroicons/react": "^2.0.17",
-        "@heroicons/vue": "^2.0.17",
-        "@inertiajs/progress": "^0.2.7",
-        "@inertiajs/vue3": "^1.0.2",
-        "ziggy-js": "^1.5.0"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "fix:eslint": "eslint --ext .js,.vue resources/js/ --fix"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "autoprefixer": "^10.4.14",
+    "axios": "^1.1.2",
+    "eslint": "^8.38.0",
+    "eslint-plugin-vue": "^9.10.0",
+    "laravel-vite-plugin": "^0.7.2",
+    "postcss": "^8.4.22",
+    "tailwindcss": "^3.3.1",
+    "vite": "^4.0.0",
+    "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.17",
+    "@heroicons/vue": "^2.0.17",
+    "@inertiajs/progress": "^0.2.7",
+    "@inertiajs/vue3": "^1.0.2",
+    "lodash": "^4.17.21",
+    "ziggy-js": "^1.5.0"
+  },
+  "name": "laravesty",
+  "description": "Laravel Based Property Listing Project",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [
+    "listing"
+  ],
+  "author": "Stephen Muambi",
+  "license": "ISC"
 }
