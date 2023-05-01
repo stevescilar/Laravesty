@@ -31,28 +31,11 @@ class ListingController extends Controller
             [
                 'filters' => $filters,
                 // display with pagination
+                // useof queryscope from model class Listing
                 'listings' => Listing::mostRecent()
-                ->when(
-                    $filters['priceFrom'] ?? false,
-                    fn ($query, $value) => $query->where('price','>=',$value)
-                )->when(
-                    $filters['priceTo'] ?? false,
-                    fn ($query, $value) => $query->where('price','<=',$value)
-                )->when(
-                    $filters['beds'] ?? false,
-                    // extension of 6+
-                    fn ($query, $value) => $query->where('beds',(int)$value < 6 ? '=' : '>=',$value)
-                )->when(
-                    $filters['baths'] ?? false,
-                    // extension of 6+
-                    fn ($query, $value) => $query->where('baths',(int)$value < 6 ? '=' : '>=',$value)
-                )->when(
-                    $filters['areaFrom'] ?? false,
-                    fn ($query, $value) => $query->where('area','>=',$value)
-                )->when(
-                    $filters['areaTo'] ?? false,
-                    fn ($query, $value) => $query->where('area','<=',$value)
-                )->paginate(9)->withQueryString()
+                    ->filter($filters) //from queryscope
+                    ->paginate(9)
+                    ->withQueryString()
             ]
             );
     }
