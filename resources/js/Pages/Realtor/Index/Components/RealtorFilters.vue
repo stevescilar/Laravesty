@@ -26,7 +26,7 @@ const filterForm = reactive ({
 })
 // reactive /ref /computed
 watch(
-    filterForm, () => router.get(
+  filterForm, () => router.get(
     route('realtor.listing.index'),
     filterForm,
     { preserveState: true, preserveScroll: true },

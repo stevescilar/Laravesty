@@ -1,24 +1,24 @@
 <template>
-    <span>{{ formattedPrice }}</span>
+  <span>{{ formattedPrice }}</span>
 </template>
 
 
 
 <script setup>
-    import { computed } from 'vue';
-    import { defineProps } from 'vue';
+import { computed } from 'vue'
+import { defineProps } from 'vue'
 
-    const props = defineProps({
-        price: [
-            Number, String
-        ]
-    })
+const props = defineProps({
+  price: [
+    Number, String,
+  ],
+})
 
-    const formattedPrice = computed (
-        () => Number(props.price).toLocaleString('en-US',{
-            style: 'currency',
-            currency: 'Ksh',
-            maximumFractionDigits: 2,
-        }),
-    )
+const formattedPrice = computed (
+  () => Number(props.price).toLocaleString('en-US',{
+    style: 'currency',
+    currency: 'Ksh',
+    maximumFractionDigits: 2,
+  }),
+)
 </script>
