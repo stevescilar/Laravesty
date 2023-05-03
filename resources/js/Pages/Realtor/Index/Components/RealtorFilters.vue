@@ -24,7 +24,7 @@ import { debounce } from 'lodash'
 const filterForm = reactive ({
   deleted: false,
 })
-// reactive /ref /computed
+// reactive /ref /computed/
 watch( 
   filterForm, debounce(() => router.get(
     route('realtor.listing.index'),
